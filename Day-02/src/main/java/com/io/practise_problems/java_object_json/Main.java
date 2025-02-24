@@ -2,8 +2,6 @@ package com.io.practise_problems.java_object_json;
 
 import org.json.JSONObject;
 
-import javax.sound.midi.Soundbank;
-
 public class Main {
 
     public static void main(String[] args) {

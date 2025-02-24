@@ -4,12 +4,9 @@ package com.io.hands_on_practise.list_json_array;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.io.practise_problems.json_array_java_objects.Student;
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.Arrays;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
