@@ -1,0 +1,32 @@
+package com.io.practise_problems.json_array_java_objects;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONArray;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class ListToJsonArray {
+    public static void main(String[] args) {
+        try {
+            // Creating a list of Student objects
+            List<Student> students = Arrays.asList(
+                    new Student("Ujjwal Gupta", 21, "ujjwal@gmail.com"),
+                    new Student("Akshit Patel", 22, "akshit@gmail.com"),
+                    new Student("Deepak Singh", 23, "deepak@gmail.com")
+            );
+
+            // Convert list to JSON using Jackson
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonArrayString = objectMapper.writeValueAsString(students);
+
+            // Convert to JSONArray (org.json)
+            JSONArray jsonArray = new JSONArray(jsonArrayString);
+
+            // Print formatted JSON
+            System.out.println(jsonArray.toString(4));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
